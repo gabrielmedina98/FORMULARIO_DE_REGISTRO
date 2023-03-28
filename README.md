@@ -23,6 +23,8 @@ Usando o recurso VAR em css
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-medina-83a504120//)
 
 
+- [Link do projeto -  veja](https://gabrielmedina98.github.io/FORMULARIO_DE_REGISTRO/)
+
 
 ## Stack utilizada
 

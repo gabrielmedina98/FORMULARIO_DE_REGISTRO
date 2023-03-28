@@ -1,55 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information</p>
-    <form action="https://register-demo.freecodecamp.org." method="post">
-        <fieldset>
-          <label for="first-name">Enter Your First Name: <input type="text" id="first-name" name=" " required ></label>
-          <label for="last-name">Enter Your Last Name: <input type="text" id="last-name" required name=" " ></label>
-          <label for="email">Enter Your Email: <input type="email"  id="email" required name=" " ></label>
-          <label for="new-password">Create a New Password: <input type="password"  pattern="[a-z0-5]{8,}" title="Oito ou mais caracteres"  id="new-password" required name=" ">
-        </label>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="shortcut icon" href="forma.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+    <h1 id="title">Formulário de Pesquisa freeCodeCamp</h1>
+    <p class="paragrafo" id="description">Obrigado por dedicar seu tempo para nos ajudar a melhorar a plataforma</p>
+</header>
+    <form action="https://register-demo.freecodecamp.org." id="survey-form">
+        <fieldset class="form-group" >
+            <label 
+            id="name-label" 
+            for="Name">Nome </label>
+             <input 
+             class="form-control"
+             type="text" 
+             id="name" 
+             placeholder="Digite seu nome"
+              required>
+
+            <label 
+            id="email-label" 
+            for="email">E-mail </label>
+            <input 
+             class="form-control"
+             type="email"
+             id="email" 
+             placeholder="Digite seu email" 
+             required>
+
+            <label 
+            id="number-label" 
+            for="number">Idade<span class="clue">(opcional)</span></label> 
+            <input 
+            class="form-control"
+            type="number" 
+            name="idade"
+            min="10" 
+            max="120" 
+            id="number" 
+            placeholder="Idade" 
+            required>
         </fieldset>
 
+    <div class="form-group">
+      <legend> Which option best describes your current role?</legend> 
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
 
-      <fieldset> 
-        <label for="personal-account"> <input class="inline" type="radio" name="account-type" id="personal-account"> Personal Account</label>
+    <fieldset class="form-group">
+        <legend>Você recomendaria o freeCodeCamp a um amigo? </legend>
+        <label>
+             <input
+            class="input-radio" 
+            checked
+            type="radio" 
+            name="recomendacao" 
+            id="definitivo-label"
+            value="Definitivamente">
+        Definitivamente
+    </label>
+       
+        
+        <label for="talvez"> 
+        
+            <input 
+            class="input-radio" 
+            type="radio" 
+            name="recomendacao" 
+            id="talvez"
+            value="talvez">Talvez</label>
+        
 
-        <label for="business-account"> <input class="inline" type="radio" name="account-type" id="business-account"> Business Account</label>
+        <label for="naoRecomendaria">
+        
+         <input 
+         class="input-radio"  
+            type="radio" 
+            name="recomendacao" 
+            id="naoRecomendaria"
+            value="naoRecomendaria">Não tenho certeza</label>
+        
+    </fieldset>
 
-       <label for="terms-and-conditions">
-          <input class="inline" id="terms-and-conditions" type="checkbox" required name=" " /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a> </label>
-      </fieldset> 
+    <fieldset class="form-group">
+    <legend>  Qual é o seu recurso favorito do freeCodeCamp?
+    </legend>
+    <select  id="Recurso-Favorite" class="form-control" required>
+        <option disabled selected value=" "> Selecione uma opção </option>
+       <option value="7">Desafios</option>
+       <option value="2"> Projetos </option>
+       <option value="3">Comunidade</option>
+       <option value="4"> Codigo aberto</option>
+       </select>
+    </fieldset>
 
-<fieldset>
-  <label for="profile-picture"> Upload a profile picture: <input type="file" id="profile-picture" name="file"></label>
-  <label for="age">Input your age (years): <input type="number" min="13" max="120" id="age" name="file">
-  </label>
-  <label for="referrer">  How did you hear about us?
-    <select id="referrer" name="referrer">
-      <option value="">(select one)</option>
-      <option value="1">freeCodeCamp News</option>
-      <option value="2">freeCodeCamp YouTube Channel</option>
-      <option value="3">freeCodeCamp Forum</option>
-      <option value="4">Other</option>
-    </select>
-  </label>
-  <label for="bio">Provide a bio:
-    <textarea rows="3" cols="30" id="bio" placeholder="I like coding on the beach..."name="bio"> </textarea>
-  </label>
-</fieldset>
+    <fieldset class="form-group">
+        <legend>O que você gostaria de ver melhorado? <span class="clue"> (Marque todos os que se aplicam) </span>  
+        </legend>
+          
+           <label for="Projetos_front_End">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="Projetos_front_End"
+            name="Projetos_front_End"
+            value="1">
+            Projetos front-end
+           </label>  
 
-      <input type="submit" value="Submit">
+           <label for="Projetos_back_End">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="Projetos_back_End"
+            name="Projetos_back_End"
+            value="2">
+            
+            Projetos back-end
+           </label>  
+
+           <label for="view Dados">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="viewDados"
+            name="viewDados"
+            value="3">
+
+
+            Visualização de dados
+           </label> 
+           
+           <label for="desafios">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="desafios"
+            name="desafios"
+            value="3">
+            
+            Desafios
+           </label> 
+
+           <label for="Cursos_adicionais">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="Cursos_adicionais"
+            name="Cursos_adicionais"
+            value="4">
+            Cursos Adicionais
+           </label> 
+
+           <label for="Forum">
+            <input 
+            class="input-checkbox"
+            type="checkbox" 
+            id="Forum"
+            name="Forum"
+            value="5">
+            Fórum
+           </label> 
+
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>Any comments or suggestions?</legend>
+            <textarea 
+            class="input-textarea"
+            name="text_area" 
+            id="text_area" 
+            placeholder="Enter your comment here...">
+        </textarea>
+    </fieldset>
+
+
+<div class="form-group">
+    <button type="submit" 
+    id="submit"
+    class="submit-button">Submit</button>
+
+            </div>
+        </div>
     </form>
-  </body>
+</body>
 </html>
-
-<!-- teste -->
